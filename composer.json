@@ -1,0 +1,11 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"Borne\\Projet-borne\\" : "src"
+		}
+	},
+	"name" : "borne/Projet-borne",
+	"require" : {
+		"php" : ">=7.0"
+	}
+}
