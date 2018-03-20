@@ -8,12 +8,7 @@ include 'vendor/autoload.php';
 $receveur = $_POST["receveur"];
 
 
-$message = new PDO('mysql:host=localhost;port=3306;dbname=Borne', 'Borne', 'il7o70jq6KQRFYpe');
-$stmt = $pdo->prepare('SELECT mail FROM Borne where id = :id"');
-$stmt->execute();
-$stmt->closeCursor();
-$pdo = null;
-sleep(40);
+$message = "";
 
 
 $mail = new PHPMailer(true); // instancie un new objet phpmailer
@@ -29,7 +24,7 @@ try {
     $mail->Password = 'pingoleon42400';
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
-    $mail->setFrom($receveur);
+    $mail->setFrom("colibri@gmail.com");
     $mail->addAddress($receveur);     // Add a recipient
     
       // Add attachments
@@ -37,7 +32,7 @@ try {
     
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Planning de la Semaine';
-    $mail->msgHTML ($message);
+    $mail->msgHTML (file_get_contents('contents.html'), __DIR__);
     $mail->AltBody = 'Bienvenue a tous';
     $mail->send();
     echo 'Message Envoyé';
