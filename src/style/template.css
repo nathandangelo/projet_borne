@@ -1,0 +1,65 @@
+h1{
+    
+ color: aliceblue;   
+ font-family: mueller, sans-serif;    
+    
+}
+
+body{
+
+background-color: black;
+ 
+}
+
+
+label{
+    
+    
+text-align: left;
+}
+    
+
+p{
+    
+text-align: left;    
+padding-left: 15px;    
+color: beige;    
+font-family: mueller, sans-serif;    
+}
+
+
+#button{
+    
+width: 110px;  
+height: 45px;    
+float: right;    
+margin-top: 290px;   
+background: white;
+color: black;    
+font-family: mueller, sans-serif;     
+    
+}
+
+
+#message{
+    
+height: 200px;
+}
+
+#receveur{
+    
+width: 300px;    
+    
+}
+
+#button{
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+#button:hover {
+    background-color: #0078C4;
+
+}
+
+
