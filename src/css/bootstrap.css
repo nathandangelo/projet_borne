@@ -1723,7 +1723,7 @@ pre code {
     margin-left: 41.66666667%;
   }
   .col-sm-offset-4 {
-    margin-left: 33.33333333%;
+    margin-left: 25%;
   }
   .col-sm-offset-3 {
     margin-left: 25%;
@@ -1767,16 +1767,16 @@ pre code {
     width: 41.66666667%;
   }
   .col-md-4 {
-    width: 33.33333333%;
+    width: 25%;
   }
   .col-md-3 {
     width: 25%;
   }
   .col-md-2 {
-    width: 16.66666667%;
+    width: 25%;
   }
   .col-md-1 {
-    width: 8.33333333%;
+    width: 25%;
   }
   .col-md-pull-12 {
     right: 100%;
