@@ -47,7 +47,7 @@ try {
     $mail->msgHTML (file_get_contents('contents.html'), __DIR__);
     $mail->AltBody = 'Bienvenue a tous';
     $mail->send();
-    header("location:http://localhost/borne/projet_borne/#t3");
+    header("location:http://localhost/borne/projet_borne/inscriptionValide.php");
 
 }
 catch (Exception $e) {
