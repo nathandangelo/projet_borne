@@ -16,16 +16,14 @@ class SubscriberDao extends DaoBase {
     
     public function addSubscriber($subscriber) {
 
-        $query = $this->bdd->prepare("INSERT INTO subscribers (name, firstname, mail, birthdate) VALUES (:name, :firstName, :email, :birthdate)");
+        $query = $this->bdd->prepare("INSERT INTO subscribers (name, mail) VALUES (:name, :email)");
         
         $query->bindParam(":name", $subscriber->name);
-        $query->bindParam(":firstName", $subscriber->firstName);
         $query->bindParam(":email", $subscriber->email);
-        $query->bindParam(":birthdate", $subscriber->birthdate);
         
         $query->execute();
     }
-    
+    /*
     public function getAllMails() {
         
         $query = $this->bdd->query("SELECT mail FROM subscribers");
@@ -35,5 +33,5 @@ class SubscriberDao extends DaoBase {
         $emails = $response->fetch();
         
         return $emails;
-    }
+    }*/
 }

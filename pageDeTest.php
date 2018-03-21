@@ -12,7 +12,7 @@ use classes\Dao\SubscriberDao;
 include "src/classes/Domain/Subscriber.php";
 include "src/classes/Dao/SubscriberDao.php";
 
-$subscriber = new Subscriber(null, 'Lala', 'du31', 'Lala@du31.com', '1993-03-11');
+$subscriber = new Subscriber(null, 'Hector', 'Totor@machin.com');
 
 $subscriberDao = new SubscriberDao();
 

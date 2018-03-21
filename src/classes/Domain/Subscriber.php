@@ -9,24 +9,16 @@ class Subscriber {
     
     public $name;
     
-    public $firstName;
-    
     public $email;
     
-    public $birthdate;
     
-    
-    public function __construct($id, $name, $firstName, $email, $birthdate) {
+    public function __construct($id, $name, $email) {
         
         $this->id = $id;
         
         $this->name = $name;
         
-        $this->firstName = $firstName;
-        
         $this->email = $email;
-        
-        $this->birthdate = $birthdate;
     }
 }
 
