@@ -3,3 +3,4 @@
 /autoload_static.php
 /installed.json
 *.php
+/LICENSE
