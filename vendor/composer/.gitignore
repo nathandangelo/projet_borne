@@ -1,0 +1,5 @@
+/autoload_psr4.php
+/autoload_real.php
+/autoload_static.php
+/installed.json
+*.php

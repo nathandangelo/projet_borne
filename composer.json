@@ -1,11 +1,12 @@
 {
 	"autoload" : {
 		"psr-4" : {
-			"Borne\\Projet-borne\\" : "src"
+			"Dta\\Projet-borne\\" : "src"
 		}
 	},
-	"name" : "borne/Projet-borne",
+	"name" : "dta/Projet-borne",
 	"require" : {
-		"php" : ">=7.0"
+		"php" : ">=7.0",
+		"phpmailer/phpmailer" : "~6.0"
 	}
 }
