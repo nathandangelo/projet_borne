@@ -20,7 +20,7 @@ crossorigin="anonymous">
     <title>formulaire</title>
    </head>
    <body>
-    <br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <div id="contenu">
 
     <a href="../#t3"><img id= "colibri" src="colibri_retour.png" alt="retour"></a>
@@ -32,19 +32,19 @@ crossorigin="anonymous">
 
            <form class="" method="post" action="indexController.php" enctype="multipart/form-data">
 
-           <p>Prénom*</p>
+           <p>Nom*</p>
            <div class="form-group">
            <label for="receveur" class="cols-sm-2 control-label"></label>
            <div class="cols-md-offset-1 col-md-3">
            <div class="input-group">
            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-           <input type="text" class="form-control" name="prenom" id="receveur"  placeholder=""/>
+           <input type="text" class="form-control" name="nom" id="receveur"  placeholder=""/>
 </div>
 </div>
 </div>
            <br><br>
 
-             <p>Nom*</p>
+             <p>Indice?*</p>
            <div class="form-group">
            <label for="receveur" class="cols-sm-2 control-label"></label>
            <div class="cols-md-offset-1 col-md-3">
@@ -64,26 +64,15 @@ crossorigin="anonymous">
            <div class="cols-md-offset-1 col-md-3">
            <div class="input-group">
            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-           <input type="text" class="form-control" name="receveur" id="indice"  placeholder=""/>
+           <input type="text" class="form-control" name="mail" id="indice"  placeholder=""/>
 </div>
 </div>
 </div>
            <br><br>
 
 
-               <p>Indice ?</p>
-           <div class="form-group">
-           <class="cols-sm-2 control-label"></label>
-           <div class="cols-md-offset-1 col-md-3">
-           <div class="input-group">
-           <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-           <input type="text" class="form-control" name="receveur" id="receveur"  placeholder=""/>
-</div>
-</div>
-</div>
-
                   <div class="form-group ">
-      <button id="button" class="btn btn-primary btn-lg btn-block login-button" style="position: absolute; top:585px; right: 100px;">Valider</button>
+      <button id="button" class="btn btn-primary btn-lg btn-block login-button" style="position: absolute; top:555px; right: 100px;">Valider</button>
 </div>
                <br/><br/>
 
