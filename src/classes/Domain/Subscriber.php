@@ -16,7 +16,7 @@ class Subscriber {
     public $birthdate;
     
     
-    public function __construct($id, $name, $firstName, $mail, $birthdate) {
+    public function __construct($id, $name, $firstName, $email, $birthdate) {
         
         $this->id = $id;
         

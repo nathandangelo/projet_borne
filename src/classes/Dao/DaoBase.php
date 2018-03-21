@@ -1,17 +1,23 @@
 <?php
 
-namespace Dao;
-
+namespace classes\Dao;
 
 class DaoBase {
     
-    protected $bdd;
+    public $bdd;
     
-    public function __construct($config) {
+    public $config = array(
         
-        $this->bdd = new \PDO("mysql:host=".$config['host'].";dbname=".$config['dbname'].";charset=utf8",
-            $config['user'],
-            $config['password']);
+        'host' => 'localhost',
+        'dbname' => 'Borne',
+        'user' => 'borne',
+        'password' => 'root'
+    );
+    
+    public function __construct() {
         
+        $this->bdd = new \PDO("mysql:host=".$this->config['host'].";dbname=".$this->config['dbname'].";charset=utf8",
+            $this->config['user'],
+            $this->config['password']);    
     }
 }
