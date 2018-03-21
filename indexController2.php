@@ -8,7 +8,6 @@ include 'vendor/autoload.php';
 
 $mail = new PHPMailer(true); // instancie un new objet phpmailer
 
-    $body  =  file_get_contents ( ' contents.html ' );
 
     //$mail->SMTPDebug = 2 ;
     $mail->isSMTP();
@@ -26,21 +25,28 @@ $mail = new PHPMailer(true); // instancie un new objet phpmailer
     $mail->AltBody = 'Bienvenue a tous';
     
     
+    //requete de recuperation des email
+    $sqlMail = new PDO('mysql:host=localhost;dbname=Borne','Borne','il7o70jq6KQRFYpe');
+    $sqlMail = $connect_db->prepare("SELECT mail FROM subcribers");
+    $sqlMail->execute();
+    $tab = array();
     
-    $mysql = mysqli_connect('localhost', 'Borne', 'il7o70jq6KQRFYpe');
-    mysqli_select_db($mysql, 'mydb');
-    $result = mysqli_query($mysql, 'SELECT mail FROM subscribers WHERE sent = FALSE');
-    foreach ($result as $row) {
-        $mail->addAddress($row['mail']);    
+    while($dataMail = $sqlMail->fetch(PDO::FETCH_OBJ))  {
+        
+        $tab[] = $dataMail;
+        
+        foreach($tab as $cle => $val){
+            $mail->AddBCC(implode($val,''), ',' );
         }
-        if (!$mail->send()) {
-            echo "Mail Error (" . str_replace("@", "&#64;", $row["mail"]) . ') ' . $mail->ErrorInfo . '<br />';
-            break; //Abandon sending
-        } else {
-            echo "Message sent to :" . $row['mail'] . ')<br />';
-            
-            
-        }   
+    }
+    $body  =  file_get_contents ( ' contents.html ' );
+    
+    
+    if(!$mail->Send()){
+        echo $mail->ErrorInfo;
+    }
+    $mail->SmtpClose();
+    unset($mail);
 
 
 require 'indexView.php';
